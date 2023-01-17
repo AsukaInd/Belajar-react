@@ -1,0 +1,12 @@
+.client-table {
+	tbody tr > :nth-child(2), thead tr > :nth-child(2) {
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+   }
+
+	tbody tr > :nth-child(2) {
+		font-weight: bold;
+   }
+}

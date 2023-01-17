@@ -1,0 +1,64 @@
+.asset-status {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.asset-status-value {
+		border-radius: $borderRadius;
+		padding: 4px 8px;
+		text-transform: capitalize;
+		margin-right: .5rem;
+		font-weight: bold;
+	}
+
+	.asset-status-button {
+		height: 24px;
+		width: 24px;
+		background: var(--gray-50);
+		color: $secondaryTextColor;
+
+		&:hover,
+		&:focus {
+			background: var(--gray-50);
+			filter: brightness(80%);
+			color: $secondaryTextColor;
+		}
+	}
+}
+
+.set-enable,
+.set-disable {
+	border-radius: 4px;
+
+	.p-menuitem-text {
+		font-weight: bold;
+	}
+}
+
+.asset-status-menu {
+	width: 110px;
+
+	.set-enable {
+		background: $successMessageBg;
+
+		.p-menuitem-text {
+			color: $successMessageTextColor!important;
+		}
+	}
+
+	.set-disable {
+		background: rgba(122, 122, 122, 0.1);
+
+		.p-menuitem-text {
+			color: #7A7A7A!important;
+		}
+	}
+}
+
+.asset-table {
+	.image {
+		height: 32px;
+		width: 32px;
+		border-radius: 4px;
+	}
+}

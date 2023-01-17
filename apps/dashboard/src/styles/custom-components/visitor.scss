@@ -1,0 +1,30 @@
+.visitor-status {
+	border-radius: $borderRadius;
+	padding: 4px 8px;
+	width: fit-content;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+	span {
+		margin-left: 5px;
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+}
+
+.visitor-item {
+	margin-bottom: 24px;
+
+	.visitor-title {
+		display: block;
+		font-weight: bold;
+		font-size: 16px;
+		color: #242323;
+		margin-bottom: 8px;
+	}
+
+	.visitor-value {
+		color: #7A7A7A;
+	}
+}

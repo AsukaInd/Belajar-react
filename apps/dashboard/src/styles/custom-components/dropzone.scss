@@ -1,0 +1,30 @@
+.dropzone {
+	background: $secondaryLightestColor;
+	border: 1px dashed #CCDEED;
+	border-radius: 8px;
+	padding: 2rem;
+	text-align: center;
+}
+
+.edit-view-profile-picture {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border-radius: 8px;
+	border: 1px solid var(--gray-50);
+
+	img {
+		height: 72px;
+		width: 72px;
+		border-radius: 8px;
+	}
+
+	.p-button, label {
+		cursor: pointer;
+		text-align: center;
+		display: flex;
+		padding: .7rem;
+	}
+}

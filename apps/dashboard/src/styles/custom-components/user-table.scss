@@ -1,0 +1,55 @@
+$brightnessLevel: brightness(90%);
+
+.user-table-btn {
+	button {
+		padding: 0.4rem;
+	}
+
+	.btn-edit {
+		background: $secondaryLightestColor;
+		color: $primaryColor;
+
+		&:hover {
+			background: $secondaryLightestColor;
+			filter: $brightnessLevel;
+			color: $primaryColor;
+		}
+
+		&:focus {
+			filter: $brightnessLevel;
+			background: $secondaryLightestColor;
+		}
+	}
+
+	.btn-delete {
+		background: #FEF5F5;
+		color: $dangerColor;
+
+		&:hover {
+			background: #FEF5F5;
+			filter: $brightnessLevel;
+			color: $dangerColor;
+		}
+
+		&:focus {
+			filter: $brightnessLevel;
+			background: #FEF5F5;
+		}
+	}
+
+	.btn-reset-password {
+		background: var(--gray-50);
+		color: $secondaryTextColor;
+
+		&:hover {
+			background: var(--gray-50);
+			filter: $brightnessLevel;
+			color: $secondaryTextColor;
+		}
+
+		&:focus {
+			filter: $brightnessLevel;
+			background: var(--gray-50);
+		}
+	}
+}

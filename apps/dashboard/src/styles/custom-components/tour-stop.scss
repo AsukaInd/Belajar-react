@@ -1,0 +1,41 @@
+.tour-stop {
+	.image {
+		height: 32px;
+		width: 32px;
+		border-radius: 4px;
+	}
+
+	.view-qr {
+		padding: 0.4rem;
+		background: var(--gray-50);
+		border-radius: 4px;
+		color: $secondaryTextColor;
+
+		&:hover {
+			background: var(--gray-50);
+			color: $secondaryTextColor;
+			filter: brightness(80%);
+		}
+
+		&:focus {
+			background: var(--gray-50);
+			color: $secondaryTextColor;
+			filter: brightness(90%);
+		}
+	}
+}
+
+.qr-wrapper {
+	background: var(--secondary-lightest-color);
+	border-radius: 8px;
+	padding: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		height: 172px;
+		width: 172px;
+		border-radius: 8px;
+	}
+}

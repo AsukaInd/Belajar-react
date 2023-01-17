@@ -1,0 +1,33 @@
+export function IconLocalPin({ className }) {
+   return (
+      <svg
+         className={className}
+         width="16"
+         height="16"
+         viewBox="0 0 16 16"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+      >
+         <path
+            d="M8.00001 6.66671C9.47278 6.66671 10.6667 5.47281 10.6667 4.00004C10.6667 2.52728 9.47278 1.33337 8.00001 1.33337C6.52724 1.33337 5.33334 2.52728 5.33334 4.00004C5.33334 5.47281 6.52724 6.66671 8.00001 6.66671Z"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinejoin="round"
+         />
+         <path
+            d="M8 6.66663V12.6666"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+         />
+         <path
+            d="M5.33334 10.6666H4.00001L1.33334 14.6666H14.6667L12 10.6666H10.6667"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+         />
+      </svg>
+   );
+}

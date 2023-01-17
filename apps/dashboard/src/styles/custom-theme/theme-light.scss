@@ -1,0 +1,12 @@
+$primaryColor: #2854F6;
+$primaryLightestColor: #E8EAF6;
+$primaryMenuTextColor: $primaryColor;
+$primaryTextColor:#ffffff;
+$secondaryColor: #005AA6;
+$secondaryLightestColor: #f2f7fb;
+$secondaryTextColor: #242323;
+$accentColor:#ff4081;
+$accentTextColor:var(--accent-text-color);
+$dangerColor: #EB4646;
+
+@import '../theme/theme_light';

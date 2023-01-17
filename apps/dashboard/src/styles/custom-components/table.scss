@@ -1,0 +1,213 @@
+.custom-table {
+  $totalColumn: var(--totalColumn);
+
+  border: 2px solid var(--gray-50);
+  border-radius: 8px;
+  overflow: auto;
+
+  table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    table-layout: fixed;
+  }
+
+  th {
+    border-bottom: 1px solid var(--gray-50);
+    background: $secondaryLightestColor;
+    padding: 14.5px 16px;
+  }
+
+  td {
+    height: 48px;
+    padding: 4.5px 16px;
+  }
+
+  th,
+  td {
+    white-space: pre;
+    text-align: left;
+  }
+
+  th:last-child {
+    width: 100%;
+  }
+
+  tfoot {
+    color: gray;
+  }
+
+  tfoot th {
+    font-weight: normal;
+  }
+
+  tr:not(:last-child) td {
+    border-bottom: 1px solid var(--gray-50);
+  }
+
+  td:nth-child(n+3):nth-last-child(n) {
+    width: calc(100% / ($totalColumn - 3));
+  }
+
+}
+
+@media (min-width: $mobileBreakpoint) {
+  :root {
+    --nth2Left: 50px;
+  }
+
+  .enable-shadow {
+    --defaultShadow: 4px 0px 12px rgba(36, 35, 35, 0.04);
+  }
+
+  .disable-shadow {
+    --defaultShadow: unset;
+  }
+
+  $boxShadow: var(--defaultShadow);
+
+  .sticky-col-3 {
+    $nth1width: var(--nth1Width);
+    $nth2width: var(--nth2Width);
+    $nth2Left: var(--nth2Left);
+
+    tbody tr> :nth-child(-n+3),
+    thead tr> :nth-child(-n+3) {
+      position: sticky;
+      z-index: 1;
+    }
+
+    tbody tr> :nth-child(-n+3) {
+      background: white;
+    }
+
+    thead tr> :nth-child(-n+3) {
+      background: $secondaryLightestColor;
+    }
+
+    tbody tr> :first-child,
+    thead tr> :first-child {
+      width: $nth1width;
+      left: 0px;
+    }
+
+    tbody tr> :nth-child(2),
+    thead tr> :nth-child(2) {
+      left: $nth2Left;
+      min-width: $nth2width;
+      max-width: $nth2width;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    tbody tr> :nth-child(3),
+    thead tr> :nth-child(3) {
+      left: calc($nth1width + $nth2width);
+      box-shadow: $boxShadow;
+    }
+  }
+
+  .sticky-col-4 {
+    $nth1width: var(--nth1Width);
+    $nth2width: var(--nth2Width);
+    $nth3width: var(--nth3Width);
+    $totalStickyCol: 4;
+
+    tbody tr> :nth-child(-n+#{$totalStickyCol}),
+    thead tr> :nth-child(-n+#{$totalStickyCol}) {
+      position: sticky;
+      z-index: 1;
+    }
+
+    tbody tr> :nth-child(-n+#{$totalStickyCol}) {
+      background: white;
+    }
+
+    thead tr> :nth-child(-n+#{$totalStickyCol}) {
+      background: $secondaryLightestColor;
+    }
+
+    tbody tr> :first-child,
+    thead tr> :first-child {
+      width: $nth1width;
+      left: 0px;
+    }
+
+    tbody tr> :nth-child(2),
+    thead tr> :nth-child(2) {
+      left: $nth1width;
+      min-width: $nth2width;
+      max-width: $nth2width;
+    }
+
+    tbody tr> :nth-child(3),
+    thead tr> :nth-child(3) {
+      left: calc($nth1width + $nth2width);
+      min-width: $nth3width;
+      max-width: $nth3width;
+      z-index: 2;
+    }
+
+    tbody tr> :nth-child(#{$totalStickyCol}),
+    thead tr> :nth-child(#{$totalStickyCol}) {
+      left: calc($nth1width + $nth2width + $nth3width);
+      box-shadow: $boxShadow;
+    }
+  }
+
+  .sticky-col-5 {
+    $nth1width: var(--nth1Width);
+    $nth2width: var(--nth2Width);
+    $nth3width: var(--nth3Width);
+    $nth4width: var(--nth4Width);
+    $totalStickyCol: 5;
+
+    tbody tr> :nth-child(-n+#{$totalStickyCol}),
+    thead tr> :nth-child(-n+#{$totalStickyCol}) {
+      position: sticky;
+      z-index: 1;
+    }
+
+    tbody tr> :nth-child(-n+#{$totalStickyCol}) {
+      background: white;
+    }
+
+    thead tr> :nth-child(-n+#{$totalStickyCol}) {
+      background: $secondaryLightestColor;
+    }
+
+    tbody tr> :first-child,
+    thead tr> :first-child {
+      width: $nth1width;
+      left: 0px;
+    }
+
+    tbody tr> :nth-child(2),
+    thead tr> :nth-child(2) {
+      left: $nth1width;
+      min-width: $nth2width;
+      max-width: $nth2width;
+    }
+
+    tbody tr> :nth-child(3),
+    thead tr> :nth-child(3) {
+      left: calc($nth1width + $nth2width);
+      min-width: $nth3width;
+      max-width: $nth3width;
+    }
+
+    tbody tr> :nth-child(4),
+    thead tr> :nth-child(4) {
+      left: calc($nth1width + $nth2width + $nth3width);
+      min-width: $nth4width;
+      max-width: $nth4width;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    tbody tr> :nth-child(#{$totalStickyCol}),
+    thead tr> :nth-child(#{$totalStickyCol}) {
+      left: calc($nth1width + $nth2width + $nth3width + $nth4width);
+      box-shadow: $boxShadow;
+    }
+  }
+}

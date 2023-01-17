@@ -1,0 +1,27 @@
+{
+   "name": "gt-react",
+   "version": "0.0.0",
+   "private": true,
+   "workspaces": [
+      "apps/*",
+      "packages/*"
+   ],
+   "scripts": {
+      "build": "turbo run build && node ./scripts/copySSR",
+      "dev": "turbo run dev --parallel",
+      "dev:dashboard": "turbo run dev --filter dashboard",
+      "dev:landing": "turbo run dev --filter landing",
+      "lint": "turbo run lint",
+      "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+      "start": "next start ./apps/landing"
+   },
+   "devDependencies": {
+      "fs-extra": "^10.1.0",
+      "prettier": "latest",
+      "turbo": "latest"
+   },
+   "engines": {
+      "node": ">=14.0.0"
+   },
+   "packageManager": "npm@8.10.0"
+}
